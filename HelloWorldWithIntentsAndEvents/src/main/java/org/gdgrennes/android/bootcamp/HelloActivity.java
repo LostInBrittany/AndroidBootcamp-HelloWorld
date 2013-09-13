@@ -18,9 +18,9 @@ public class HelloActivity extends Activity {
         txtHello = (TextView) findViewById(R.id.textHello);
 
         Bundle extras = getIntent().getExtras();
-        String name = extras.getString("name");
+        String name = extras.getString("message");
 
-        txtHello.setText(txtHello.getText()+" "+name+"!");
+        txtHello.setText(name);
 
     }
 
