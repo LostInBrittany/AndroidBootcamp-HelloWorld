@@ -8,16 +8,20 @@ import android.widget.TextView;
 
 public class HelloActivity extends Activity {
 
+    TextView txtHello;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hello);
 
+        txtHello = (TextView) findViewById(R.id.textHello);
+
         Bundle extras = getIntent().getExtras();
         String name = extras.getString("name");
 
-        TextView nameLabel = (TextView) findViewById(R.id.textHello);
-        nameLabel.setText(nameLabel.getText()+" "+name);
+        txtHello.setText(txtHello.getText()+" "+name+"!");
+
     }
 
 
