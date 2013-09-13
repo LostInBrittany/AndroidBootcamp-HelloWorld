@@ -1,10 +1,12 @@
 package org.gdgrennes.android.bootcamp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -32,9 +34,10 @@ public class MainActivity extends Activity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),
-                        "Hello World!",
-                        Toast.LENGTH_LONG).show();
+                String name = ((EditText) findViewById(R.id.editTextName)).getText().toString();
+                Intent helloIntent = new Intent("org.gdgrennes.bootcamp.android.HELLO");
+                helloIntent.putExtra("name", name);
+                startActivity(helloIntent);
             }
         });
 

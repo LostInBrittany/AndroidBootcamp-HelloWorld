@@ -3,6 +3,7 @@ package org.gdgrennes.android.bootcamp;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.TextView;
 
 
 public class HelloActivity extends Activity {
@@ -11,6 +12,12 @@ public class HelloActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hello);
+
+        Bundle extras = getIntent().getExtras();
+        String name = extras.getString("name");
+
+        TextView nameLabel = (TextView) findViewById(R.id.textHello);
+        nameLabel.setText(nameLabel.getText()+" "+name);
     }
 
 
@@ -20,5 +27,7 @@ public class HelloActivity extends Activity {
         getMenuInflater().inflate(R.menu.hello, menu);
         return true;
     }
+
+
     
 }
