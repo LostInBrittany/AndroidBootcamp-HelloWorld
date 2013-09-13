@@ -34,7 +34,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-
         Button b = (Button)findViewById(R.id.buttonOK);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,9 +42,7 @@ public class MainActivity extends Activity {
                 new HelloTask().execute(name);
             }
         });
-
     }
-
 
     private class HelloTask extends AsyncTask<String, Void, String> {
 
@@ -61,11 +58,8 @@ public class MainActivity extends Activity {
                     k=i/j*i/j*i;
                 }
             }
-
-
             Log.d("AsyncTask", "doInBackground() ends - Result="+strings[0]);
             return strings[0];
-
         }
         @Override
         protected void onPostExecute(String result) {
