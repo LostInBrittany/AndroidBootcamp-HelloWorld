@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HelloWorldWithIntentsAndEvents/HelloWorldWithIntentsAndEvents.iml" filepath="$PROJECT_DIR$/HelloWorldWithIntentsAndEvents/HelloWorldWithIntentsAndEvents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorldWithIntentsAndEventsProject.iml" filepath="$PROJECT_DIR$/HelloWorldWithIntentsAndEventsProject.iml" />
+    </modules>
+  </component>
+</project>
+
